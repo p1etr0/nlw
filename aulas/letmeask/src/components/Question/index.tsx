@@ -2,8 +2,6 @@ import {ReactNode} from 'react';
 import cx from 'classnames';
 
 import './styles.scss'
-import { bool } from 'prop-types';
-import { boolean } from 'yargs';
 
 type QuestionProps = {
   content: string;

@@ -18,6 +18,8 @@
     max-height: 45px;
   }
 
+
+
   #header-button{
     display: flex;
     gap: 16px;
@@ -29,14 +31,30 @@
 
   main.content{
     display: block;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 
-    .room-title{
-      
+    .room-title{  
       margin: 32px 0 24px;
       display: flex;
       align-items: center;
+
+      .apresentation-mode{
+        margin-left: 5%;
+        #apresentation-button{
+          height: 40px;
+          border: 1px solid #835afd;
+          border-radius: 8px;
+          font-weight: 500;
+          background: #835afd;
+          color: #fff;
+          padding: 0 32px;
+        
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
     }
 
     h1{
@@ -114,6 +132,106 @@
 
     .question-list{
       margin-top: 32px;
-    }
+    } 
   }  
+
+
+ 
 }
+
+.apresentation-modal{
+  margin-top: 10%;
+  margin-left: 20%;
+  height: 50%;
+  width: 60%;
+  border-radius: 8px;
+  border: 1px solid #737380;
+  background: white;
+  font-family: 'Poppins', sans-serif;
+
+ > #modal-close-button{
+    border: none;
+    margin: 2%;
+
+  }
+
+  .box-question{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5%;
+    .question-list-modal{
+      height: 100%;
+      width: 100%;
+      .question{
+        margin-left: 7%;
+        width: 85%;
+        height: 100%;
+        font-size: 30px;
+  
+        .user-info{
+          display: flex;
+          align-items: center;
+    
+          img{
+            margin-top: 30%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+          }
+    
+          #span-user{
+            margin-top: 30%;
+            margin-left: 8px;
+            color: #737380;
+            background: transparent;
+            font-size: 20px;
+          }
+        }
+    
+        > div{
+          display: flex;
+          gap: 16px;
+        }
+    
+        button{
+          margin-top: 100%;
+          border: 0;
+          background: transparent;
+          cursor: pointer;
+          transition: filter 0.2s;
+    
+          &.like-button{
+            display: flex;
+            align-items: center;
+            color: #737380;
+            gap: 8px;
+    
+            &.liked{
+              color: #835afd;
+              svg path{
+                stroke: #835afd;
+              }
+            }
+    
+            &.hover{
+              filter: brightness(0.8);
+            }
+          }
+
+        }
+      }
+    }
+
+    #right-arrow{
+      cursor: pointer;
+      margin-right: 2%;
+    }    
+    #left-arrow{
+      cursor: pointer;
+      margin-left: 2%;
+    }
+  }
+}
+
